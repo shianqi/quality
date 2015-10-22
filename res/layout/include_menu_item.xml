@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent">
+    <ScrollView 
+	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	 	<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical" >
+	        <LinearLayout
+	            android:orientation="vertical"
+	            android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content"
+	        	android:layout_margin="5dp"
+	        	android:padding="10dp"
+	        	android:background="#eeeeee">
+	            <TextView 
+	                android:layout_width="fill_parent"
+	        		android:layout_height="15dp"
+	        		android:layout_marginTop="20dp"
+	        		android:textSize="10dp"
+	        		android:textColor="#999999"
+	        		android:text="@string/setting"/>
+	            <View 
+	                android:layout_width="fill_parent"
+	        		android:layout_height="1dp"
+	        		android:background="#999999"/>
+	            <TextView 
+	                android:layout_width="fill_parent"
+	        		android:layout_height="50dp"
+	        		android:gravity="center_vertical"
+	        		android:text="@string/setting"/>
+	            <View 
+	                android:layout_width="fill_parent"
+	        		android:layout_height="1dp"
+	        		android:background="#cccccc"/>
+	            <TextView 
+	                android:layout_width="fill_parent"
+	        		android:layout_height="50dp"
+	        		android:gravity="center_vertical"
+	        		android:text="@string/setting"/>
+	        </LinearLayout>
+	       
+	    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    	android:id="@+id/RelativeLayout01" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:paddingBottom="4dip" 
+        android:paddingLeft="12dip"
+        android:background="@drawable/list_item"
+        android:paddingRight="12dip">
+	<ImageView 
+        android:paddingTop="12dip"
+        android:paddingBottom="12dip"
+        android:layout_alignParentRight="true"
+        android:layout_width="200dp" 
+        android:layout_height="200dp" 
+        android:id="@+id/ItemImage"
+        /> 
+
+	<TextView 
+	    android:paddingTop="12dip"
+	    android:layout_height="wrap_content" 
+	    android:textSize="20dip" 
+	    android:layout_width="fill_parent" 
+	    android:id="@+id/ItemTitle"
+    />
+	<TextView 
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:layout_below="@id/ItemTitle" 
+        android:id="@+id/ItemText"
+        />
+	<TextView 
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:layout_below="@id/ItemText" 
+        android:id="@+id/ItemText2"
+        /> 
+	<TextView
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:layout_below="@id/ItemText2" 
+        android:id="@+id/ItemText3"
+        />
+	<TextView
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:layout_below="@id/ItemText3" 
+        android:id="@+id/ItemText4"
+        />
+	<TextView
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:layout_below="@id/ItemText4" 
+        android:id="@+id/ItemText5"
+        />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" 
+	android:layout_width="fill_parent"
+	android:background="#ffffff" 
+	android:orientation="vertical"
+	android:id="@+id/add_heart">
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText" 
+	 	android:inputType="number"/>
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText2" 
+	 	android:inputType="number"/>
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText3" 
+	 	android:inputType="number"/>
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText4" 
+	 	android:inputType="number"/>
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText5" 
+	 	android:inputType="number"/>
+	<EditText
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent" 
+	 	android:id="@+id/myTimeText6" 
+	 	android:inputType="number"/>
+	<TextView 
+	    android:layout_height="wrap_content"
+	 	android:layout_width="fill_parent"
+	 	android:text="hello"
+	 	android:textColor="#ff0000"/>
+</LinearLayout>

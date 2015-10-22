@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000" 
+    xmlns:app1="http://schemas.android.com/apk/res/com.imudges.quality">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+         <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="10"
+	        android:orientation="vertical" >
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="5"
+		        android:orientation="vertical" >
+		        <RelativeLayout 
+		            android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent">
+		        	
+		            <TextView 
+		        	    android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		        	    android:layout_marginLeft="90dp"
+		        	    android:textColor="#ffffff"
+		        	    android:layout_centerHorizontal="true"
+		        	    android:text="闫小喵"
+		        	    android:layout_marginBottom="10dp"
+		        	    android:layout_alignParentBottom="true"
+		        	    android:textSize="20dp"
+		            	android:layout_marginRight="110dp"/>
+		        </RelativeLayout>
+		     </LinearLayout>
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:orientation="vertical" >
+		        <RelativeLayout 
+		            android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent">
+		            <com.imudges.quality.CircleImageView  
+		                android:id="@+id/user_photo"
+			            android:layout_width="130dp"  
+			            android:layout_height="130dp"  
+			            android:layout_centerInParent="true"  
+			            android:src="@drawable/img_portrait" 
+			            android:layout_centerHorizontal="true"
+			            android:layout_centerVertical="true"
+			            app1:border_width="2dp"
+			            app1:border_color="#ffffff"/> 
+			        <ImageView 
+		                android:layout_width="30dp"
+		                android:layout_height="30dp"
+		                android:background="@drawable/camera"
+		                android:layout_centerVertical="true"
+		                android:layout_toLeftOf="@id/user_photo"
+		                android:layout_marginRight="20dp"
+		                />
+		        </RelativeLayout>
+		     </LinearLayout>
+	     </LinearLayout>
+	    
+	        
+         <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="7"
+	        android:orientation="vertical" >
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+		        <RelativeLayout 
+		            android:onClick="OnClickButton01"
+		            android:id="@+id/RelativeLayout1"
+		            android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent">
+			        <ImageView 
+		        	    android:layout_width="30dp"
+		                android:layout_height="30dp"
+		                android:background="@drawable/list"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="50dp"/>
+		        	<TextView 
+		        	    android:id="@+id/today_yusuan"
+		        	    android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		        	    android:layout_marginLeft="90dp"
+		        	    android:textColor="#ffffff"
+		        	    android:layout_centerVertical="true"
+		        	    android:layout_centerHorizontal="true"
+		        	    android:text="今日预算"
+		        	    android:textSize="18dp"
+		            	android:layout_marginRight="110dp"/>
+		            <View 
+			            android:layout_width="wrap_content"
+			            android:layout_height="1dp"
+			            android:background="#ffffff"
+			            android:layout_alignParentBottom="true"
+			            android:layout_marginLeft="40dp"
+			            android:layout_marginRight="40dp"/>
+		        </RelativeLayout>
+		     </LinearLayout>
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+		        <RelativeLayout 
+		            android:onClick="OnClickButton02"
+		            android:id="@+id/RelativeLayout2"
+		            android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent">
+		             <ImageView 
+		        	    android:layout_width="30dp"
+		                android:layout_height="30dp"
+		                android:background="@drawable/like"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="50dp"/>
+		        	<TextView 
+		        	    android:layout_width="wrap_content"
+		            	android:layout_height="wrap_content"
+		        	    android:layout_marginLeft="90dp"
+		        	    android:textColor="#ffffff"
+		        	    android:layout_centerVertical="true"
+		        	    android:layout_centerHorizontal="true"
+		        	    android:text="心愿单"
+		        	    android:textSize="18dp"
+		            	android:layout_marginRight="110dp"/>
+		            <View 
+		            android:layout_width="wrap_content"
+		            android:layout_height="1dp"
+		            android:background="#ffffff"
+		            android:layout_alignParentBottom="true"
+		            android:layout_marginLeft="40dp"
+		            android:layout_marginRight="40dp"/>
+		        </RelativeLayout>
+		     </LinearLayout>
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+		        <RelativeLayout 
+		            android:onClick="OnClickButton03"
+		            android:id="@+id/RelativeLayout3"
+		            android:layout_width="fill_parent"
+		        	android:layout_height="fill_parent">
+		             <ImageView 
+		        	    android:layout_width="30dp"
+		                android:layout_height="30dp"
+		                android:background="@drawable/volum"
+		                android:layout_centerVertical="true"
+		                android:layout_marginLeft="50dp"/>
+		        	<TextView 
+		        	    android:layout_width="wrap_content"  
+		            	android:layout_height="wrap_content"
+		        	    android:layout_marginLeft="90dp"
+		        	    android:textColor="#ffffff"
+		        	    android:layout_centerVertical="true"
+		        	    android:layout_centerHorizontal="true"
+		        	    android:text="设置"
+		        	    android:textSize="18dp"
+		            	android:layout_marginRight="110dp"/>
+		            <View 
+		            android:layout_width="wrap_content"
+		            android:layout_height="1dp"
+		            android:background="#ffffff"
+		            android:layout_alignParentBottom="true"
+		            android:layout_marginLeft="40dp"
+		            android:layout_marginRight="40dp"/>
+		        </RelativeLayout>
+		     </LinearLayout>
+		     <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="0.8"
+		        android:orientation="vertical" >
+	     	</LinearLayout>
+		</LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- 菜单主页面 -->

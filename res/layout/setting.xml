@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"  
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" xmlns:app1="http://schemas.android.com/apk/res/com.imudges.quality">
+	<ScrollView 
+	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_margin="5dp"
+        	android:padding="10dp"
+        	android:background="#eeeeee">
+            <TextView 
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="@string/setting"/>
+            <View 
+                android:layout_width="fill_parent"
+        		android:layout_height="1dp"
+        		android:background="#999999"/>
+            <LinearLayout 
+                android:onClick="setTime"
+                android:layout_width="fill_parent"
+        		android:layout_height="wrap_content">
+                <TextView 
+                   	android:id="@+id/textTime"
+	                android:layout_width="fill_parent"
+	        		android:layout_height="50dp"
+	        		android:gravity="center_vertical"/>
+            </LinearLayout>
+            
+
+            <View 
+                android:layout_width="fill_parent"
+        		android:layout_height="1dp"
+        		android:background="#cccccc"/>
+            <LinearLayout 
+                android:onClick="setMoney"
+                android:layout_width="fill_parent"
+        		android:layout_height="wrap_content">
+                <TextView 
+                	android:id="@+id/textMoney"
+	                android:layout_width="fill_parent"
+	        		android:layout_height="50dp"
+	        		android:gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_margin="5dp"
+        	android:padding="10dp"
+        	android:background="#eeeeee">
+			
+            <RelativeLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ToggleButton
+	                android:id="@+id/toggleButton1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:textOn="防误滑已开启"
+	                android:textOff="修改预算比例"/>
+            </RelativeLayout>
+            
+         
+            <TextView 
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="预算比例设置"/>
+            <View 
+                android:layout_width="fill_parent"
+        		android:layout_height="1dp"
+        		android:background="#999999"/>
+			<TextView 
+			    android:id="@+id/text1"
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="饮食"/>
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView 
+                android:id="@+id/text2"
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="学习"/>
+            <SeekBar
+                android:id="@+id/seekBar2"
+                 android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            
+            <TextView 
+                android:id="@+id/text3"
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="小金库"/>
+            <SeekBar
+                android:id="@+id/seekBar3"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView 
+                android:id="@+id/text4"
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="娱乐"/>
+            <SeekBar
+                android:id="@+id/seekBar4"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView 
+                android:id="@+id/text5"
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="交通"/>
+           
+            <SeekBar
+                android:id="@+id/seekBar5"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text6" 
+                android:layout_width="fill_parent"
+        		android:layout_height="15dp"
+        		android:layout_marginTop="20dp"
+        		android:textSize="12dp"
+        		android:textColor="#999999"
+        		android:text="其他"/>
+           
+            <SeekBar
+                android:id="@+id/seekBar6"
+                android:max="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:onClick="recoverUsedMoney"
+                android:text="重置已使用金额"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:layout_width="fill_parent">
+            </Button>
+        </LinearLayout>
+        
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+<!-- 主页面 -->
