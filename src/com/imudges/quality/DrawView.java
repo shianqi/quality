@@ -1,15 +1,12 @@
 package com.imudges.quality;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 public class DrawView extends View{
 	private int dataValue;
@@ -41,11 +38,11 @@ public class DrawView extends View{
         canvas.drawColor(Color.WHITE); 
         p.setColor(Color.rgb(230,230,230)); 
         p.setStyle(Paint.Style.STROKE);
-        p.setAntiAlias(true);  //Ïû³ı¾â³İ   
+        p.setAntiAlias(true);  //æ¶ˆé™¤é”¯é½¿   
         p.setStrokeWidth(20);
         
         a-=30;
-        RectF oval2 = new RectF(30, 30, a, a);// ÉèÖÃ¸öĞÂµÄ³¤·½ĞÎ£¬É¨Ãè²âÁ¿  
+        RectF oval2 = new RectF(30, 30, a, a);// è®¾ç½®ä¸ªæ–°çš„é•¿æ–¹å½¢ï¼Œæ‰«ææµ‹é‡  
         canvas.drawArc(oval2, 0, 360, false, p); 
         
         int colorR=0;
@@ -58,7 +55,7 @@ public class DrawView extends View{
 			colorR=255;
 			colorG=(dataValue*2)*255/100;
 		}
-		p.setColor(Color.rgb(colorR,colorG,0));// ÉèÖÃ
+		p.setColor(Color.rgb(colorR,colorG,0));// è®¾ç½®
 		
 		
         double valueDouble=3.6*(double)dataValue;

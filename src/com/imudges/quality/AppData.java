@@ -1,9 +1,7 @@
 package com.imudges.quality;
 
-import android.R.string;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.Toast;
 
 public class AppData {
 	private int usedMoney1;

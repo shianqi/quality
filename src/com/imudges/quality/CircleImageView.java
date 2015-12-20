@@ -1,6 +1,5 @@
 package com.imudges.quality;
 
-import com.imudges.quality.R;
 import android.content.Context;  
 import android.content.res.TypedArray;  
 import android.graphics.Bitmap;  

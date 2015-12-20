@@ -3,17 +3,13 @@ package com.imudges.quality;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
-
-import com.imudges.quality.R;
 
 public class budgetFragment extends Fragment {
 
@@ -54,10 +50,10 @@ public class budgetFragment extends Fragment {
 		int localMoney=sharedPreferences.getInt("money", 1000);
 		
 		myTimeTextView=(TextView)getView().findViewById(R.id.textTime);
-		myTimeTextView.setText("‘§À„÷‹∆⁄£∫ "+localTime+"÷‹");
+		myTimeTextView.setText("È¢ÑÁÆóÂë®ÊúüÔºö "+localTime+"Âë®");
 		
 		myMoneyTextView=(TextView)getView().findViewById(R.id.textMoney);
-		myMoneyTextView.setText("ø…÷ß≈‰Ω∂Ó£∫"+localMoney+"‘™");
+		myMoneyTextView.setText("ÂèØÊîØÈÖçÈáëÈ¢ùÔºö"+localMoney+"ÂÖÉ");
 		
 		playseekBar1=(SeekBar)getView().findViewById(R.id.seekBar1);
 		playseekBar2=(SeekBar)getView().findViewById(R.id.seekBar2);
@@ -87,12 +83,12 @@ public class budgetFragment extends Fragment {
 		playseekBar5.setProgress(SeekBar5);
 		playseekBar6.setProgress(SeekBar6);
 		
-		textView1.setText("“˚ ≥:"+SeekBar1);
-		textView2.setText("—ßœ∞:"+SeekBar2);
-		textView3.setText("–ƒ‘∏µ•:"+SeekBar3);
-		textView4.setText("”È¿÷:"+SeekBar4);
-		textView5.setText("ΩªÕ®:"+SeekBar5);
-		textView6.setText("¥ÊøÓ:"+SeekBar6);
+		textView1.setText("È•ÆÈ£ü:"+SeekBar1);
+		textView2.setText("Â≠¶‰π†:"+SeekBar2);
+		textView3.setText("ÂøÉÊÑøÂçï:"+SeekBar3);
+		textView4.setText("Â®±‰πê:"+SeekBar4);
+		textView5.setText("‰∫§ÈÄö:"+SeekBar5);
+		textView6.setText("Â≠òÊ¨æ:"+SeekBar6);
 		
 		playseekBar1.setOnSeekBarChangeListener(new SeekBarListener1());
 		playseekBar2.setOnSeekBarChangeListener(new SeekBarListener2());
@@ -142,7 +138,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar1", playseekBar1.getProgress());
 	        	editor.commit(); 
-	        	textView1.setText("“˚ ≥:"+ playseekBar1.getProgress());
+	        	textView1.setText("È•ÆÈ£ü:"+ playseekBar1.getProgress());
 	        }
 
 	        @Override
@@ -150,7 +146,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar1", playseekBar1.getProgress());
 	        	editor.commit();
-	        	textView1.setText("“˚ ≥:"+ playseekBar1.getProgress());
+	        	textView1.setText("È•ÆÈ£ü:"+ playseekBar1.getProgress());
 	        }
 
 	        @Override
@@ -158,7 +154,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar1", playseekBar1.getProgress());
 	        	editor.commit();
-	        	textView1.setText("“˚ ≥:"+ playseekBar1.getProgress());
+	        	textView1.setText("È•ÆÈ£ü:"+ playseekBar1.getProgress());
 	    }
 	 }
 	 private class SeekBarListener2 implements SeekBar.OnSeekBarChangeListener
@@ -171,7 +167,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar2", playseekBar2.getProgress());
 	        	editor.commit();
-	        	textView2.setText("—ßœ∞:"+ playseekBar2.getProgress());
+	        	textView2.setText("Â≠¶‰π†:"+ playseekBar2.getProgress());
 	        }
 
 	        @Override
@@ -179,7 +175,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar2", playseekBar2.getProgress());
 	        	editor.commit();
-	        	textView2.setText("—ßœ∞:"+ playseekBar2.getProgress());
+	        	textView2.setText("Â≠¶‰π†:"+ playseekBar2.getProgress());
 	        }
 
 	        @Override
@@ -187,7 +183,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar2", playseekBar2.getProgress());
 	        	editor.commit();
-	        	textView2.setText("—ßœ∞:"+ playseekBar2.getProgress());
+	        	textView2.setText("Â≠¶‰π†:"+ playseekBar2.getProgress());
 	        }
 	       
 	    }
@@ -202,7 +198,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar3", playseekBar3.getProgress());
 	        	editor.commit();
-	        	textView3.setText("–ƒ‘∏µ•:"+ playseekBar3.getProgress());
+	        	textView3.setText("ÂøÉÊÑøÂçï:"+ playseekBar3.getProgress());
 	        }
 
 	        @Override
@@ -210,7 +206,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar3", playseekBar3.getProgress());
 	        	editor.commit();
-	        	textView3.setText("–ƒ‘∏µ•:"+ playseekBar3.getProgress());
+	        	textView3.setText("ÂøÉÊÑøÂçï:"+ playseekBar3.getProgress());
 	        }
 
 	        @Override
@@ -218,7 +214,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar3", playseekBar3.getProgress());
 	        	editor.commit();
-	        	textView3.setText("–ƒ‘∏µ•:"+ playseekBar3.getProgress());
+	        	textView3.setText("ÂøÉÊÑøÂçï:"+ playseekBar3.getProgress());
 	        }
 	       
 	    }
@@ -233,7 +229,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar4", playseekBar4.getProgress());
 	        	editor.commit();
-	        	textView4.setText("”È¿÷:"+ playseekBar4.getProgress());
+	        	textView4.setText("Â®±‰πê:"+ playseekBar4.getProgress());
 	        }
 
 	        @Override
@@ -241,7 +237,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar4", playseekBar4.getProgress());
 	        	editor.commit();
-	        	textView4.setText("”È¿÷:"+ playseekBar4.getProgress());
+	        	textView4.setText("Â®±‰πê:"+ playseekBar4.getProgress());
 	        }
 
 	        @Override
@@ -249,7 +245,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar4", playseekBar4.getProgress());
 	        	editor.commit();
-	        	textView4.setText("”È¿÷:"+ playseekBar4.getProgress());
+	        	textView4.setText("Â®±‰πê:"+ playseekBar4.getProgress());
 	        }
 	       
 	    }
@@ -264,7 +260,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar5", playseekBar5.getProgress());
 	        	editor.commit();
-	        	textView5.setText("ΩªÕ®:"+ playseekBar5.getProgress());
+	        	textView5.setText("‰∫§ÈÄö:"+ playseekBar5.getProgress());
 	        }
 
 	        @Override
@@ -272,7 +268,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar5", playseekBar5.getProgress());
 	        	editor.commit();
-	        	textView5.setText("ΩªÕ®:"+ playseekBar5.getProgress());
+	        	textView5.setText("‰∫§ÈÄö:"+ playseekBar5.getProgress());
 	        }
 
 	        @Override
@@ -280,7 +276,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar5", playseekBar5.getProgress());
 	        	editor.commit();
-	        	textView5.setText("ΩªÕ®:"+ playseekBar5.getProgress());
+	        	textView5.setText("‰∫§ÈÄö:"+ playseekBar5.getProgress());
 	        }
 	       
 	    }
@@ -295,7 +291,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar6", playseekBar6.getProgress());
 	        	editor.commit();
-	        	textView6.setText("¥¢–Ó:"+ playseekBar6.getProgress());
+	        	textView6.setText("ÂÇ®ËìÑ:"+ playseekBar6.getProgress());
 	        }
 
 	        @Override
@@ -303,7 +299,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar6", playseekBar6.getProgress());
 	        	editor.commit();
-	        	textView6.setText("¥¢–Ó:"+ playseekBar6.getProgress());
+	        	textView6.setText("ÂÇ®ËìÑ:"+ playseekBar6.getProgress());
 	        }
 
 	        @Override
@@ -311,7 +307,7 @@ public class budgetFragment extends Fragment {
 	            // TODO Auto-generated method stub
 	        	editor.putInt("SeekBar6", playseekBar6.getProgress());
 	        	editor.commit();
-	        	textView6.setText("¥¢–Ó:"+ playseekBar6.getProgress());
+	        	textView6.setText("ÂÇ®ËìÑ:"+ playseekBar6.getProgress());
 	        }
 	    }
 }

@@ -1,33 +1,21 @@
 package com.imudges.quality;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-
-import android.R.integer;
-import android.R.string;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.AvoidXfermode.Mode;
 import android.os.Bundle;
-import android.provider.OpenableColumns;
-import android.provider.ContactsContract.Contacts.Data;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
-import android.view.View.OnCreateContextMenuListener;
-import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -40,7 +28,6 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.imudges.quality.R;
 
 public class heartFragment extends Fragment {
 
@@ -70,7 +57,7 @@ public class heartFragment extends Fragment {
 		listItem = new ArrayList<HashMap<String, Object>>();
 		heartMoney=(TextView)getActivity().findViewById(R.id.heartMoney);
 		
-		//SQLite µÄÊ¹ÓÃ
+		//SQLite çš„ä½¿ç”¨
 		db=getActivity().openOrCreateDatabase("quality.db", getActivity().MODE_PRIVATE, null);
 		db.execSQL("create table if not exists itemtb("
 				+ "_id integer primary key autoincrement,"
@@ -85,11 +72,11 @@ public class heartFragment extends Fragment {
 			Log.i("1", ""+idList[i]);
 		}
 		
-        listItemAdapter = new SimpleAdapter(getActivity(),listItem,//Êı¾İÔ´ 
-                R.layout.list_items,//ListItemµÄXMLÊµÏÖ
-                //¶¯Ì¬Êı×éÓëImageItem¶ÔÓ¦µÄ×ÓÏî        
+        listItemAdapter = new SimpleAdapter(getActivity(),listItem,//æ•°æ®æº 
+                R.layout.list_items,//ListItemçš„XMLå®ç°
+                //åŠ¨æ€æ•°ç»„ä¸ImageItemå¯¹åº”çš„å­é¡¹        
                 new String[] {"ItemImage","ItemTitle", "ItemText","ItemText2","ItemText3","ItemText4","ItemText5"}, 
-                //ImageItemµÄXMLÎÄ¼şÀïÃæµÄÒ»¸öImageView,Á½¸öTextView ID
+                //ImageItemçš„XMLæ–‡ä»¶é‡Œé¢çš„ä¸€ä¸ªImageView,ä¸¤ä¸ªTextView ID
                 new int[] {R.id.ItemImage,R.id.ItemTitle,R.id.ItemText,R.id.ItemText2,R.id.ItemText3,R.id.ItemText4,R.id.ItemText5}
             );
         
@@ -99,7 +86,7 @@ public class heartFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                     long arg3) {
-                Toast.makeText(getActivity(), "hello"+arg2,  Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "hello"+arg2,  Toast.LENGTH_SHORT).show();
             }
         });
         
@@ -110,17 +97,17 @@ public class heartFragment extends Fragment {
 					int arg2, long arg3) {
 				final int ItemNumber=arg2;
 				new AlertDialog.Builder(getActivity())
-					.setTitle("²Ù×÷£º")
-					.setPositiveButton("È¡Ïû", new DialogInterface.OnClickListener() {
+					.setTitle("æ“ä½œï¼š")
+					.setPositiveButton("å–æ¶ˆ", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
 							getItem();
 							// TODO Auto-generated method stub
-							//Toast.makeText(getActivity(), "È¡Ïû"+ItemNumber,  Toast.LENGTH_SHORT).show();
+							//Toast.makeText(getActivity(), "å–æ¶ˆ"+ItemNumber,  Toast.LENGTH_SHORT).show();
 						}
 					})
-					.setNegativeButton("ĞŞ¸Ä", new DialogInterface.OnClickListener() {
+					.setNegativeButton("ä¿®æ”¹", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -138,10 +125,10 @@ public class heartFragment extends Fragment {
 							
 							
 							new AlertDialog.Builder(getActivity())
-								.setTitle("ÇëĞŞ¸ÄĞÄÔ¸µ¥£º")
+								.setTitle("è¯·ä¿®æ”¹å¿ƒæ„¿å•ï¼š")
 								.setView(textEntryView)
 								.setIcon(android.R.drawable.ic_dialog_info)
-								.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+								.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 									
 									@Override
 									public void onClick(DialogInterface arg0, int arg1) {
@@ -163,17 +150,17 @@ public class heartFragment extends Fragment {
 										listItemAdapter.notifyDataSetChanged();
 									}
 								})
-								.setNegativeButton("È¡Ïû", null).show();	
-							//Toast.makeText(getActivity(), "ĞŞ¸Ä"+ItemNumber,  Toast.LENGTH_SHORT).show();
+								.setNegativeButton("å–æ¶ˆ", null).show();	
+							//Toast.makeText(getActivity(), "ä¿®æ”¹"+ItemNumber,  Toast.LENGTH_SHORT).show();
 						}
 					})
-					.setNeutralButton("É¾³ı", new DialogInterface.OnClickListener() {
+					.setNeutralButton("åˆ é™¤", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
 							// TODO Auto-generated method stub
 							
-							//Toast.makeText(getActivity(), "É¾³ı"+ItemNumber,  Toast.LENGTH_SHORT).show();
+							//Toast.makeText(getActivity(), "åˆ é™¤"+ItemNumber,  Toast.LENGTH_SHORT).show();
 							db.delete(TABLENAME, "rowid like "+idList[ItemNumber], null);
 							
 							getItem();
@@ -183,7 +170,7 @@ public class heartFragment extends Fragment {
 					})
 					.show();
 				
-				//Toast.makeText(getActivity(), "³¤°´"+arg2,  Toast.LENGTH_SHORT).show();
+				//Toast.makeText(getActivity(), "é•¿æŒ‰"+arg2,  Toast.LENGTH_SHORT).show();
 				// TODO Auto-generated method stub
 				return true;
 			}
@@ -201,18 +188,18 @@ public class heartFragment extends Fragment {
 			int i=0;
 			
 			
-			//×Ü½ğ¶î
+			//æ€»é‡‘é¢
 			while(c.moveToNext()){
 				HashMap<String, Object> map = new HashMap<String, Object>();
-	            map.put("ItemImage", R.drawable.img_portrait);//Í¼Ïñ×ÊÔ´µÄID
+	            map.put("ItemImage", R.drawable.img_portrait);//å›¾åƒèµ„æºçš„ID
 	            map.put("ItemTitle", c.getString(c.getColumnIndex("title")));
 	            map.put("ItemText", c.getString(c.getColumnIndex("description")));
-	            map.put("ItemText2", "Ê±¼ä£º"+c.getString(c.getColumnIndex("time")));
+	            map.put("ItemText2", "æ—¶é—´ï¼š"+c.getString(c.getColumnIndex("time")));
 	            
-	            map.put("ItemText3", "½ğ¶î£º"+c.getString(c.getColumnIndex("money"))+"Ôª");
+	            map.put("ItemText3", "é‡‘é¢ï¼š"+c.getString(c.getColumnIndex("money"))+"å…ƒ");
 	            
 	            AppData appData=new AppData(getActivity());
-	            map.put("ItemText4", "Ä¿±ê½ğ¶î£º"+(appData.getMoney3()-appData.getUsedMoney3())+
+	            map.put("ItemText4", "ç›®æ ‡é‡‘é¢ï¼š"+(appData.getMoney3()-appData.getUsedMoney3())+
 	            		"/"+c.getString(c.getColumnIndex("money")));
 	            
 	            
@@ -232,7 +219,7 @@ public class heartFragment extends Fragment {
 	            
 	            String dateString=sDateFormat.format(date);
 	            
-	            map.put("ItemText5", "Ê£ÓàÊ±¼ä£º"+(days>=0?days+"Ìì":"ĞÄÔ¸ÒÑ¹ıÆÚ"));
+	            map.put("ItemText5", "å‰©ä½™æ—¶é—´ï¼š"+(days>=0?days+"å¤©":"å¿ƒæ„¿å·²è¿‡æœŸ"));
 	            
 	            listItem.add(map);
 	            
@@ -266,10 +253,10 @@ public class heartFragment extends Fragment {
 				
 				final EditText edtInput4=(EditText)textEntryView.findViewById(R.id.heart_add_dialog_money);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈëĞÄÔ¸µ¥£º")
+					.setTitle("è¯·è¾“å…¥å¿ƒæ„¿å•ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -288,7 +275,7 @@ public class heartFragment extends Fragment {
 							listItemAdapter.notifyDataSetChanged();			
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();		
+					.setNegativeButton("å–æ¶ˆ", null).show();		
 				}
 		});
 	}

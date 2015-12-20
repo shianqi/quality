@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="actionbarsherlock">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/libs/actionbarsherlock" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/libs/actionbarsherlock/gen" />
+      <root url="file://$PROJECT_DIR$/libs/actionbarsherlock/src" />
+      <root url="file://$PROJECT_DIR$/libs/actionbarsherlock/test" />
+    </SOURCES>
+  </library>
+</component>

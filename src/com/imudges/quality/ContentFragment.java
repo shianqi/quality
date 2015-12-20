@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,8 +16,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.imudges.quality.R;
 
 public class ContentFragment extends Fragment {
 
@@ -112,10 +109,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈëÒûÊ³Ê¹ÓÃ½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥é¥®é£Ÿä½¿ç”¨é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -133,7 +130,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 		
@@ -146,10 +143,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈëÑ§Ï°Ê¹ÓÃ½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥å­¦ä¹ ä½¿ç”¨é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -167,7 +164,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 		
@@ -181,10 +178,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈëÐÄÔ¸µ¥Ê¹ÓÃ½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥å¿ƒæ„¿å•ä½¿ç”¨é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -202,7 +199,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 		
@@ -216,10 +213,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈëÓéÀÖÊ¹ÓÃ½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥å¨±ä¹ä½¿ç”¨é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -237,7 +234,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 		
@@ -251,10 +248,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈë½»Í¨Ê¹ÓÃ½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥äº¤é€šä½¿ç”¨é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -272,7 +269,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 		
@@ -285,10 +282,10 @@ public class ContentFragment extends Fragment {
 				final View textEntryView = inflater.inflate(R.layout.dialog, null);  
 				final EditText edtInput=(EditText)textEntryView.findViewById(R.id.myTimeText);
 				new AlertDialog.Builder(getActivity())
-					.setTitle("ÇëÊäÈë´æ¿î½ð¶î£º")
+					.setTitle("è¯·è¾“å…¥å­˜æ¬¾é‡‘é¢ï¼š")
 					.setView(textEntryView)
 					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+					.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 						
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -306,7 +303,7 @@ public class ContentFragment extends Fragment {
 							init2();
 						}
 					})
-					.setNegativeButton("È¡Ïû", null).show();
+					.setNegativeButton("å–æ¶ˆ", null).show();
 			}
 		});
 	}
@@ -321,7 +318,7 @@ public class ContentFragment extends Fragment {
 			view=new DrawView(getActivity());
 		}
         view.setValue((appData.getMoney1()-appData.getUsedMoney1())*100/(appData.getMoney1()>0?appData.getMoney1():1),appData.getMoney1()-appData.getUsedMoney1());
-        //Í¨Öªview×é¼þÖØ»æ  
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜  
         view.invalidate();
         Log.w("init", "diaoyong") ; 
         
@@ -333,7 +330,7 @@ public class ContentFragment extends Fragment {
         final DrawView view2=new DrawView(getActivity());  
         view2.setMinimumHeight(100);  
         view2.setMinimumWidth(100);  
-        //Í¨Öªview×é¼þÖØ»æ   
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜   
         view2.setValue((appData.getMoney2()-appData.getUsedMoney2())*100/(appData.getMoney2()>0?appData.getMoney2():1),appData.getMoney2()-appData.getUsedMoney2());
         view2.invalidate();
         layout2.addView(view2); 
@@ -343,7 +340,7 @@ public class ContentFragment extends Fragment {
         final DrawView view3=new DrawView(getActivity());  
         view3.setMinimumHeight(100);  
         view3.setMinimumWidth(100);  
-        //Í¨Öªview×é¼þÖØ»æ   
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜   
         view3.setValue((appData.getMoney3()-appData.getUsedMoney3())*100/(appData.getMoney3()>0?appData.getMoney3():1),appData.getMoney3()-appData.getUsedMoney3());
         view3.invalidate();
         layout3.addView(view3); 
@@ -352,7 +349,7 @@ public class ContentFragment extends Fragment {
         final DrawView view4=new DrawView(getActivity());  
         view4.setMinimumHeight(100);  
         view4.setMinimumWidth(100);  
-        //Í¨Öªview×é¼þÖØ»æ   
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜   
         view4.setValue((appData.getMoney4()-appData.getUsedMoney4())*100/(appData.getMoney4()>0?appData.getMoney4():1),appData.getMoney4()-appData.getUsedMoney4());
         view4.invalidate();
         layout4.addView(view4); 
@@ -361,7 +358,7 @@ public class ContentFragment extends Fragment {
         final DrawView view5=new DrawView(getActivity());  
         view5.setMinimumHeight(100);  
         view5.setMinimumWidth(100);  
-        //Í¨Öªview×é¼þÖØ»æ   
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜   
         view5.setValue((appData.getMoney5()-appData.getUsedMoney5())*100/(appData.getMoney5()>0?appData.getMoney5():1),appData.getMoney5()-appData.getUsedMoney5());
         view5.invalidate();
         layout5.addView(view5); 
@@ -370,7 +367,7 @@ public class ContentFragment extends Fragment {
         final DrawView view6=new DrawView(getActivity());  
         view6.setMinimumHeight(100);  
         view6.setMinimumWidth(100);  
-        //Í¨Öªview×é¼þÖØ»æ   
+        //é€šçŸ¥viewç»„ä»¶é‡ç»˜   
         view6.setValue((appData.getMoney6()-appData.getUsedMoney6())*100/(appData.getMoney6()>0?appData.getMoney6():1),appData.getMoney6()-appData.getUsedMoney6());
         view6.invalidate();
         layout6.addView(view6); 

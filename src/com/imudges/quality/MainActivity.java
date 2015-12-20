@@ -1,35 +1,18 @@
 package com.imudges.quality;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.security.auth.PrivateCredentialPermission;
-
-import com.imudges.quality.ContentFragment;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-
 import android.os.Bundle;
-import android.R.string;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Canvas;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,17 +21,17 @@ public class MainActivity extends SlidingFragmentActivity {
 	private Fragment mContent;
 	private TextView myTimeTextView;
 	private TextView myMoneyTextView;
-	private TextView myMoney;
 	private AppData appData;
-	
+	private SlidingMenu sm;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_main);
-		setTitle("ÖÊ»î"); 
+		setTitle("è´¨æ´»"); 
 		
 		// check if the content frame contains the menu frame
-		//¼ì²éÊÇ·ñ°üº¬²Ëµ¥À¸
+		//æ£€æŸ¥æ˜¯å¦åŒ…å«èœå•æ 
 		
 		appData=new AppData(getApplicationContext());
 		if (findViewById(R.id.menu_frame) == null) {
@@ -58,13 +41,13 @@ public class MainActivity extends SlidingFragmentActivity {
 					.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 		} else {
 			// add a dummy view
-			//Ìí¼ÓÒ»¸öĞéÄâview
+			//æ·»åŠ ä¸€ä¸ªè™šæ‹Ÿview
 			View v = new View(this);
 			setBehindContentView(v);
 			getSlidingMenu().setSlidingEnabled(false);
 			getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 		}
-		// ÉèÖÃÉÏÃæµÄview
+		// è®¾ç½®ä¸Šé¢çš„view
 		if (savedInstanceState != null) {
 			mContent = getSupportFragmentManager().getFragment(
 					savedInstanceState, "mContent");
@@ -76,21 +59,21 @@ public class MainActivity extends SlidingFragmentActivity {
 		getSupportFragmentManager().beginTransaction()
 			.replace(R.id.content_frame, mContent).commit();
 		
-		//ÉèÖÃºóÃæview
+		//è®¾ç½®åé¢view
 		getSupportFragmentManager().beginTransaction()
 			.replace(R.id.menu_frame, new MenuFragment()).commit();
 		
-		//×Ô¶¨Òåslidingmenu
-		SlidingMenu sm = getSlidingMenu();
+		//è‡ªå®šä¹‰slidingmenu
+		sm = getSlidingMenu();
 		sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
 		sm.setFadeEnabled(false);
 		sm.setBehindScrollScale(0.25f);
 		sm.setFadeDegree(0.25f);
 
-		//ÉèÖÃ²Ëµ¥Ä»²¼±³¾°Í¼Æ¬
+		//è®¾ç½®èœå•å¹•å¸ƒèƒŒæ™¯å›¾ç‰‡
 		sm.setBackgroundResource(R.drawable.menu_back);
 		
-		//ÉèÖÃ²Ëµ¥°´Å¥µÄ¶¯»­Ğ§¹û
+		//è®¾ç½®èœå•æŒ‰é’®çš„åŠ¨ç”»æ•ˆæœ
 		sm.setBehindCanvasTransformer(new SlidingMenu.CanvasTransformer() {
 			@Override
 			public void transformCanvas(Canvas canvas, float percentOpen) {
@@ -102,36 +85,38 @@ public class MainActivity extends SlidingFragmentActivity {
 	}
 	
 	
-	
-	public void OnClickButton01(View v){  
+	/*
+	 *è·³è½¬åˆ°ä¸»é¡µé¢ï¼Œå¹¶å°†Fragmentåˆ‡æ¢åˆ°ç¬¬ä¸€é¡µ
+	 */
+	public void OnClickButton01(View v){
+		getSlidingMenu().showContent();
 		mContent = new ContentFragment();
 		getSupportFragmentManager().beginTransaction()
-		.replace(R.id.content_frame, mContent).commit();
-		getSlidingMenu().showContent();
+				.replace(R.id.content_frame, mContent).commit();
     }
 	
-	public void OnClickButton02(View v){  
+	public void OnClickButton02(View v){
+		getSlidingMenu().showContent();
 		mContent = new heartFragment();
 		getSupportFragmentManager().beginTransaction()
-		.replace(R.id.content_frame, mContent).commit();
-		getSlidingMenu().showContent();
+				.replace(R.id.content_frame, mContent).commit();
     }
 	
-	public void OnClickButton03(View v){  
+	public void OnClickButton03(View v){
+		getSlidingMenu().showContent();
 		mContent = new budgetFragment();
 		getSupportFragmentManager().beginTransaction()
-		.replace(R.id.content_frame, mContent).commit();
-		getSlidingMenu().showContent();
+				.replace(R.id.content_frame, mContent).commit();
     }
 	
 	public void setTime(View v){ 
 		LayoutInflater inflater = getLayoutInflater();
 		final View layout = inflater.inflate(R.layout.dialog,(ViewGroup) findViewById(R.id.dialog));
 		new AlertDialog.Builder(this)
-			.setTitle("ÇëÊäÈëÔ¤ËãÖÜÆÚ")
+			.setTitle("è¯·è¾“å…¥é¢„ç®—å‘¨æœŸ")
 			.setIcon(android.R.drawable.ic_dialog_info)
 			.setView(layout)
-			.setPositiveButton("È·¶¨", new OnClickListener() {
+			.setPositiveButton("ç¡®å®š", new OnClickListener(){
 				
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
@@ -151,7 +136,7 @@ public class MainActivity extends SlidingFragmentActivity {
 					if(str1==null||str1.equals("")){
 						
 					}else{
-						myTimeTextView.setText("Ô¤ËãÖÜÆÚ£º "+str1+"ÖÜ");
+						myTimeTextView.setText("é¢„ç®—å‘¨æœŸï¼š "+str1+"å‘¨");
 						SharedPreferences sharedPreferences=getSharedPreferences("userConfig", MODE_PRIVATE);
 						SharedPreferences.Editor editor=sharedPreferences.edit();
 						editor.putInt("time", Integer.parseInt(str1));
@@ -159,25 +144,29 @@ public class MainActivity extends SlidingFragmentActivity {
 					}
 				}
 			})
-			.setNegativeButton("È¡Ïû", null).show();
+			.setNegativeButton("å–æ¶ˆ", null).show();
     }
-	
+
+	//åˆ¤æ–­æ˜¯å¦ä¸ºç©º
 	public void  showEmpty(){
-		Toast.makeText(this, "ÊäÈë²»ÄÜÎª¿Õ,Êı¾İÃ»ÓĞĞŞ¸Ä",  Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "è¾“å…¥ä¸èƒ½ä¸ºç©º,æ•°æ®æ²¡æœ‰ä¿®æ”¹",  Toast.LENGTH_SHORT).show();
 	}
-	
+
+	//åˆ¤æ–­ä¸ºé›¶
 	public void  showZero(){
-		Toast.makeText(this, "ÊäÈë²»ÄÜÎª0",  Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "è¾“å…¥ä¸èƒ½ä¸º0",  Toast.LENGTH_SHORT).show();
 	}
-	
+
+
+
 	public void setMoney(View v){
 		LayoutInflater inflater = getLayoutInflater();
 		final View layout = inflater.inflate(R.layout.dialog,(ViewGroup) findViewById(R.id.dialog));
 		new AlertDialog.Builder(this)
-				.setTitle("ÇëÊäÈë¿ÉÖ§Åä½ğ¶î")
+				.setTitle("è¯·è¾“å…¥å¯æ”¯é…é‡‘é¢")
 				.setIcon(android.R.drawable.ic_dialog_info)
 				.setView(layout)
-				.setPositiveButton("È·¶¨", new OnClickListener() {
+				.setPositiveButton("ç¡®å®š", new OnClickListener() {
 					
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
@@ -197,7 +186,7 @@ public class MainActivity extends SlidingFragmentActivity {
 							
 						}else{
 							str1=editText2.getText().toString();
-							myMoneyTextView.setText("¿ÉÖ§Åä½ğ¶î£º"+str1+"Ôª");
+							myMoneyTextView.setText("å¯æ”¯é…é‡‘é¢ï¼š"+str1+"å…ƒ");
 							SharedPreferences sharedPreferences=getSharedPreferences("userConfig", MODE_PRIVATE);
 							SharedPreferences.Editor editor=sharedPreferences.edit();
 							editor.putInt("money", Integer.parseInt(str1));
@@ -205,7 +194,7 @@ public class MainActivity extends SlidingFragmentActivity {
 						}
 					}
 				})
-				.setNegativeButton("È¡Ïû", null).show();
+				.setNegativeButton("å–æ¶ˆ", null).show();
     }
 	
 	public void recoverUsedMoney(View v){
@@ -218,7 +207,7 @@ public class MainActivity extends SlidingFragmentActivity {
 		editor.putInt("usedMoney5", 0);
 		editor.putInt("usedMoney6", 0);
 		editor.commit();
-		Toast.makeText(this, "ÒÑÊ¹ÓÃ½ğ¶îÒÑÖØÖÃ",  Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "å·²ä½¿ç”¨é‡‘é¢å·²é‡ç½®",  Toast.LENGTH_SHORT).show();
 	}
 	
 }
